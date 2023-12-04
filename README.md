@@ -21,7 +21,8 @@ Para executar este projeto, é necessário ter instalado o MySQL e o xampp tendo
    ```
    https://github.com/IsabelaAthayde/modelagem-pi-mod3.git
    ```
-3. Importe o arquivo `projetoResiliadata.sql` no PHPMyAdmin:
+
+2. Importe o arquivo `projetoResiliadata.sql` no PHPMyAdmin:
    ```
    Import -> Selecione o arquivo projetoResiliadata.sql -> Clique em "Importar"
    ```
@@ -40,17 +41,21 @@ SELECT * FROM empresa;
 SELECT * FROM colaborador;
 ```
 
+
 * **Listar todas tecnologias:**
 
 ```sql
 SELECT * FROM tecnologia;
 ```
 
+
 * **Listar todos os registros:**
 
 ```sql
 SELECT * FROM registro;
 ```
+
+
 
 * **Recuperar todas as tecnologias, por área:**
   
@@ -63,6 +68,8 @@ ORDER BY registro.area;
 
 ```
 
+
+
 * **Recuperar todos os colaboradores das empresas:**
 
 ```sql
@@ -73,6 +80,8 @@ ON colaborador.id_empresa = empresa.id_empresa;
 
 ```
 
+
+
 * **Recuperar todas as tecnologias que uma empresa parceira está utilizando:**
 
 ```sql
@@ -82,6 +91,8 @@ INNER JOIN tecnologia
 ON registro.id_tec = tecnologia.id_tec
 WHERE registro.id_empresa = 1;
 ```
+
+
 
 # 🤝 Colaboradores
 
@@ -102,11 +113,11 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
 
 ## Contribuições são bem-vindas. Para contribuir, siga as seguintes instruções:
 
-1- Realize um fork do projeto.
-2- Crie uma branch com a nova feature.
-3- Realize o commit das alterações.
-4- Realize o push da branch para o seu fork.
-5- Abra um pull request para o repositório original.
+1. Realize um fork do projeto.
+2. Crie uma branch com a nova feature.
+3. Realize o commit das alterações.
+4. Realize o push da branch para o seu fork.
+5. Abra um pull request para o repositório original.
 
 ## Licença
 
