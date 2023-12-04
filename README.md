@@ -4,7 +4,7 @@
 
 # SQL Modelagem banco de dados ResiliaData
 
-Este projeto consiste na criação de um banco de dados de relações empresariais, utilizando a linguagem SQL. O banco de dados é composto pelas seguintes tabelas:
+Este projeto consta a criação de um banco de dados de relações empresariais, utilizando a linguagem SQL. O banco de dados é composto pelas seguintes tabelas:
 
 * **Empresas:** armazena informações sobre as empresas, como nome, CNPJ, localização e contato.
 * **Colaboradores:** armazena informações sobre os colaboradores, como nome, cargo, email, disponibilidade.
