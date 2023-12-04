@@ -89,7 +89,6 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
 
 <table>
   <tr>
-    
     <td align="center">
       <a href="https://github.com/IsabelaAthayde">
         <img src="https://avatars.githubusercontent.com/u/100873483?v=4" width="100px;" alt="Foto da Isabela Athayde"/><br>
