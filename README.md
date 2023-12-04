@@ -6,7 +6,7 @@
 
 Este projeto consiste na criação de um banco de dados de relações empresariais, utilizando a linguagem SQL. O banco de dados é composto pelas seguintes tabelas:
 
-* **Empresas:** armazena informações sobre as empresas, como nome, CNPJ, endereço e telefone.
+* **Empresas:** armazena informações sobre as empresas, como nome, CNPJ, localização e contato.
 * **Colaboradores:** armazena informações sobre os colaboradores, como nome, cargo, email, disponibilidade.
 * **Tecnologias:** armazena informações sobre as tecnologias utilizadas pelas empresas, como nome, versão e status.
 * **Registros:** armazena a relação entre as empresas e as tecnologias, indicando quais tecnologias são utilizadas por cada empresa, assim como a permissão e a área a qual ela se aplica.
