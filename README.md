@@ -2,49 +2,86 @@
 ![GitHub forks](https://img.shields.io/github/forks/iuricode/README-template?style=for-the-badge)
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/iuricode/README-template?style=for-the-badge)
 
-# SQL Modelagem banco de dados para Sistema de Ensino
+# SQL Modelagem banco de dados ResiliaData
 
-O Projeto é
+Este projeto consiste na criação de um banco de dados de relações empresariais, utilizando a linguagem SQL. O banco de dados é composto pelas seguintes tabelas:
 
-## Status do projeto
-— Completo
+* **Empresas:** armazena informações sobre as empresas, como nome, CNPJ, endereço e telefone.
+* **Colaboradores:** armazena informações sobre os colaboradores, como nome, cargo, email, disponibilidade.
+* **Tecnologias:** armazena informações sobre as tecnologias utilizadas pelas empresas, como nome, versão e status.
+* **Registros:** armazena a relação entre as empresas e as tecnologias, indicando quais tecnologias são utilizadas por cada empresa, assim como a permissão e a área a qual ela se aplica.
 
-## Recursos
-
-- mySQL
-- Xampp
-
-- Explicar as realizações
 ## Requisitos
 
-Certifique-se de ter os seguintes requisitos instalados em seu ambiente de desenvolvimento:
-- Xampp
-- mySQL
+Para executar este projeto, é necessário ter instalado o MySQL e o xampp tendo acesso ao PHPMyAdmin.
 
-## Como Usar
+## Instruções de instalação
 
-1. Clone este repositório em sua máquina local:
+1. Clone o repositório do GitHub:
+   ```
+   https://github.com/IsabelaAthayde/modelagem-pi-mod3.git
+   ```
+3. Importe o arquivo `projetoResiliadata.sql` no PHPMyAdmin:
+   ```
+   Import -> Selecione o arquivo projetoResiliadata.sql -> Clique em "Importar"
+   ```
 
-```git clone https://github.com/IsabelaAthayde/politics-group2-mod2.git```
+Exemplos de consultas SQL
+A seguir, são apresentados alguns exemplos de consultas SQL que podem ser utilizadas para consultar o banco de dados:
 
-2. Navegue até o diretório do projeto:
+* **Listar todas as empresas:**
+```sql
+SELECT * FROM empresa;
+```
 
-```cd politics-group2-mod2```
+* **Listar todos os colaboradores:**
 
-3. Execute o programa Python para iniciar o formulário:
+```sql
+SELECT * FROM colaborador;
+```
 
-```python dataFrame.py```
+* **Listar todas tecnologias:**
 
+```sql
+SELECT * FROM tecnologia;
+```
 
-4. O formulário será iniciado, permitindo que os participantes respondam às perguntas.
+* **Listar todos os registros:**
 
-5. Após a coleta de dados, caso deseje manter o padrão, para o nome do arquivo digite: politicsForm
+```sql
+SELECT * FROM registro;
+```
 
-6. Pronto! Os resultados serão exportados para análise em arquivo csv.
+* **Recuperar todas as tecnologias, por área:**
+  
+```sql
+SELECT tecnologia.nome, registro.area
+FROM tecnologia
+INNER JOIN registro
+ON tecnologia.id_tec = registro.id_tec
+ORDER BY registro.area;
 
-## Ética e Privacidade
+```
 
-A coleta de informações sobre tópicos polêmicos deve ser realizada com sensibilidade e respeito. Siga as regulamentações de privacidade e obtenha o consentimento adequado dos participantes, se necessário.
+* **Recuperar todos os colaboradores das empresas:**
+
+```sql
+SELECT colaborador.nome, colaborador.cargo, empresa.nome
+FROM colaborador
+INNER JOIN empresa
+ON colaborador.id_empresa = empresa.id_empresa;
+
+```
+
+* **Recuperar todas as tecnologias que uma empresa parceira está utilizando:**
+
+```sql
+SELECT registro.area, tecnologia.nome, tecnologia.versao
+FROM registro
+INNER JOIN tecnologia
+ON registro.id_tec = tecnologia.id_tec
+WHERE registro.id_empresa = 1;
+```
 
 # 🤝 Colaboradores
 
@@ -64,9 +101,13 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
   </tr>
 </table>
 
-## Contribuições
+## Contribuições são bem-vindas. Para contribuir, siga as seguintes instruções:
 
-Se você desejar contribuir para o projeto, sinta-se à vontade para fazer um fork do repositório e enviar um pull request com melhorias ou correções.
+1- Realize um fork do projeto.
+2- Crie uma branch com a nova feature.
+3- Realize o commit das alterações.
+4- Realize o push da branch para o seu fork.
+5- Abra um pull request para o repositório original.
 
 ## Licença
 
